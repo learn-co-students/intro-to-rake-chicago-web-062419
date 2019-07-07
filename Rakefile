@@ -5,9 +5,9 @@ namespace :greeting do
     puts "hello from Rake!"
   end
 
-  desc 'outputs Wasssup to the terminal'
-  task :wassup do 
-    puts "Wasuuppp"
+  desc 'outputs hola to the terminal'
+  task :hola do 
+    puts "hola de Rake!"
   end
 end
 
@@ -28,12 +28,12 @@ namespace :db do
     require_relative './db/seeds.rb'
   end
   #we can test if we have successfully migrated and seeded our database
-  desc 'drop into the Pry console'
-  task :console => :environment do
-    Pry.start
-  end
 end
 
+desc 'drop into the Pry console'
+task :console => :environment do
+  Pry.start
+end
 
 
 
